@@ -1,0 +1,52 @@
+<div class="container search-container">
+  <h1 class="text-center">My library</h1>
+  <div class="row">
+    <div class="col">
+      <!--<select name="" id="">-->
+        <!--<option value="">Sort by: Date</option>-->
+        <!--<option value="">1</option>-->
+        <!--<option value="">2</option>-->
+      <!--</select>-->
+    </div>
+    <div class="col-6">
+      <input type="text" class="form-control search-input" [(ngModel)]="search">
+    </div>
+    <div class="col"></div>
+  </div>
+</div>
+
+
+<div infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="10" (scrolled)="onScroll($event)"
+     class="bg-section">
+  <div class="row">
+    <div *ngFor="let i of (post$ | async) | filter:search " class="col-md-3 col-lg-3">
+      <div class="container-img">
+        <figure class="effect-image">
+          <img src="http://via.placeholder.com/350x150}" alt="{{i.collectionName}}"/>
+          <figcaption>
+            <span class="download-link">
+              download link...
+            </span>
+            <div class="action-icon">
+              <span class="icon-">
+                icon here...
+              </span>
+            </div>
+            <span>{{ i?.id}} <span>{{ i?.title}}</span></span>
+            <p class="icon-links">
+              <a href="#" class="btn btn-primary"><span>{{i?.collection_code}}</span></a>
+              <a href="#" class="btn btn-primary"><span>{{i?.collection_name}}</span></a>
+            </p>
+            <p class="description">{{ i?.caption}}</p>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf="!finished">
+  Loading more movies...
+</div>
+<div *ngIf="finished">
+  End of database... That's all folks!
+</div>
