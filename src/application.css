@@ -1,0 +1,160 @@
+.container-img figure figcaption, .container-img figure figcaption > a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+.bg-section, .infos {
+  padding: 40px;
+  background-color: #f0f5f4; }
+  .bg-section .no-gutters > .col, .bg-section .no-gutters > [class*=col-], .infos .no-gutters > .col, .infos .no-gutters > [class*=col-] {
+    padding-right: 1px;
+    padding-left: 1px; }
+
+.search-container {
+  padding: 40px 0; }
+
+.search-input {
+  width: 100%; }
+
+.container-img {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1000px;
+  list-style: none;
+  text-align: center; }
+  .container-img figure {
+    position: relative;
+    float: left;
+    overflow: hidden;
+    margin: 1px;
+    min-width: 320px;
+    max-width: 480px;
+    max-height: 360px;
+    width: 100%;
+    text-align: center;
+    cursor: pointer; }
+    .container-img figure img {
+      position: relative;
+      display: block;
+      min-height: 100%;
+      max-width: 100%; }
+    .container-img figure figcaption {
+      padding: 2em;
+      color: #fff;
+      font-size: 1.25em;
+      backface-visibility: hidden; }
+    .container-img figure figcaption::before {
+      pointer-events: none; }
+    .container-img figure figcaption::after {
+      pointer-events: none; }
+
+figure.effect-image img {
+  height: 100%;
+  width: 100%;
+  background-size: cover; }
+figure.effect-image figcaption {
+  top: auto;
+  bottom: 0;
+  padding: 1em;
+  background: rgba(253, 251, 251, 0.75);
+  color: #3c4a50;
+  transition: transform 0.35s;
+  transform: translate3d(0, 100%, 0); }
+  figure.effect-image figcaption .icon-links {
+    position: relative;
+    top: 50%;
+    margin: 0 auto; }
+  figure.effect-image figcaption [class^="right-"], figure.effect-image figcaption [class^="left-"] {
+    color: black; }
+    figure.effect-image figcaption [class^="right-"] span, figure.effect-image figcaption [class^="left-"] span {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 16px; }
+  figure.effect-image figcaption .right-top-link {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 20px;
+    padding: 20px; }
+  figure.effect-image figcaption .left-top-link {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 20px;
+    padding: 20px; }
+  figure.effect-image figcaption .left-bottom-link {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    font-size: 20px;
+    padding: 20px; }
+  figure.effect-image figcaption .right-bottom-link {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 20px;
+    padding: 20px; }
+figure.effect-image p.description {
+  position: absolute;
+  bottom: 8em;
+  padding: 2em;
+  color: #fff;
+  text-transform: none;
+  font-size: 90%;
+  opacity: 0;
+  transition: opacity 0.35s; }
+figure.effect-image p.icon-links a {
+  transition: transform 0.35s;
+  transform: translate3d(0, 200%, 0); }
+  figure.effect-image p.icon-links a span::before {
+    display: inline-block;
+    padding: 8px 10px;
+    speak: none; }
+figure.effect-image span {
+  transition: transform 0.35s;
+  transform: translate3d(0, 200%, 0); }
+figure.effect-image:hover p.description {
+  opacity: 1; }
+figure.effect-image:hover p.icon-links a {
+  transform: translate3d(0, 0, 0); }
+  figure.effect-image:hover p.icon-links a:nth-child(3) {
+    transition-delay: 0.1s; }
+  figure.effect-image:hover p.icon-links a:nth-child(2) {
+    transition-delay: 0.15s; }
+  figure.effect-image:hover p.icon-links a:first-child {
+    transition-delay: 0.2s; }
+figure.effect-image:hover figcaption {
+  transform: translate3d(0, 0, 0); }
+
+.btn-succes-video {
+  background-color: #19b2ad;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  color: white;
+  padding: .5rem 1.7rem;
+  font-size: 1rem;
+  line-height: 1.5; }
+  .btn-succes-video:hover {
+    background-color: #1a94b2;
+    color: white;
+    transition: background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out; }
+
+.btn-succes-clone {
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 2px solid white;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  color: white;
+  padding: .5rem 1.7rem;
+  font-size: 1rem;
+  line-height: 1.5; }
+  .btn-succes-clone:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    transition: background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out; }
+
+/*# sourceMappingURL=application.css.map */
