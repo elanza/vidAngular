@@ -19,6 +19,15 @@ export class AppComponent implements OnInit, OnDestroy {
 
   constructor(private http: HttpClient, private _ms: MovieService) { }
 
+  ngOnInit() {
+    this._ms.loadMovies(0, 10);
+    this.post$ = this._ms.movies();
+    this._ms.total().subscribe((total) => {
+      this.total = total;
+    });
+  }
+
+  ngOnDestroy(): void { }
 
   onScroll(event) {
     const start = this.sum;
@@ -28,18 +37,10 @@ export class AppComponent implements OnInit, OnDestroy {
     } else {
       this.finished = true;
     }
-
   }
 
-  ngOnInit() {
-    this._ms.loadMovies(0, 10);
-    this.post$ = this._ms.movies();
-    this._ms.total().subscribe((total) => {
-      this.total = total;
-    });
+  sort(sort) {
+    this._ms.sort(sort);
   }
 
-  ngOnDestroy(): void {
-
-  }
 }

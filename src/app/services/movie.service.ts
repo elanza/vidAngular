@@ -1,4 +1,4 @@
-import { GetMovies } from '../store/movies.actions';
+import { GetMovies, SortMovies } from '../store/movies.actions';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { Http, Response } from '@angular/http';
@@ -8,7 +8,6 @@ import { Store } from '@ngrx/store';
 
 @Injectable()
 export class MovieService {
-  readonly ROOT_URL = 'https://jsonplaceholder.typicode.com';
 
   constructor(private http: Http, private store: Store<any>) { }
 
@@ -24,5 +23,7 @@ export class MovieService {
     return this.store.select('movies').map(values => values.total);
   }
 
-
+  sort(field: string) {
+    this.store.dispatch(new SortMovies(field));
+  }
 }
